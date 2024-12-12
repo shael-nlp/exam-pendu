@@ -16,7 +16,7 @@ def lire_filtrer_mots(chemin_lexique:str, longueur:int) -> list:
     Extrait le premier mot pour chaque ligne en retirant les tirets et espaces.
     Si le mot est de la bonne longueur, neutralise les accents,
     le met en majuscule pour les besoins du jeu
-    et l'ajoute dans un set pour être exporté
+    et l'ajoute dans un set converti en liste pour être exporté
     """
     with open(chemin_lexique, 'r', encoding='utf8') as f:
         dico = set()

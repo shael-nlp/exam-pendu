@@ -17,6 +17,18 @@ def lire_filtrer_mots(chemin_lexique:str, longueur:int) -> list:
     Si le mot est de la bonne longueur, neutralise les accents,
     le met en majuscule pour les besoins du jeu
     et l'ajoute dans un set converti en liste pour être exporté
+
+    Entrée:
+    ----------
+    chemin_lexique : str
+        Le chemin vers le fichier contenant la liste de mots à filtrer
+    longueur : int
+        La longueur des mots à filtrer.
+
+    Sortie:
+    ----------
+    List[str]
+        Une liste de mots sans doublons, accents, espaces, tirets, et en majuscule.
     """
     with open(chemin_lexique, 'r', encoding='utf8') as f:
         dico = set()

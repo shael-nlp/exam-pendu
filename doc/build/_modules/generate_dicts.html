@@ -40,8 +40,13 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <!-- Local TOC -->
-              <div class="local-toc"></div>
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../hangman.html">Jeu du Pendu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generate_dicts.html">generate_dicts module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solver.html">solver module</a></li>
+</ul>
+
         </div>
       </div>
     </nav>
@@ -87,7 +92,19 @@
 <span class="sd">    Extrait le premier mot pour chaque ligne en retirant les tirets et espaces.</span>
 <span class="sd">    Si le mot est de la bonne longueur, neutralise les accents,</span>
 <span class="sd">    le met en majuscule pour les besoins du jeu</span>
-<span class="sd">    et l&#39;ajoute dans un set pour être exporté</span>
+<span class="sd">    et l&#39;ajoute dans un set converti en liste pour être exporté</span>
+
+<span class="sd">    Entrée:</span>
+<span class="sd">    ----------</span>
+<span class="sd">    chemin_lexique : str</span>
+<span class="sd">        Le chemin vers le fichier contenant la liste de mots à filtrer</span>
+<span class="sd">    longueur : int</span>
+<span class="sd">        La longueur des mots à filtrer.</span>
+
+<span class="sd">    Sortie:</span>
+<span class="sd">    ----------</span>
+<span class="sd">    List[str]</span>
+<span class="sd">        Une liste de mots sans doublons, accents, espaces, tirets, et en majuscule.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">chemin_lexique</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
         <span class="n">dico</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
